@@ -20,10 +20,10 @@ namespace AF_ERESTServices
                 cliente.Timeout = 10000;
                 cliente.DeliveryMethod = SmtpDeliveryMethod.Network;
                 cliente.UseDefaultCredentials = false;
-                cliente.Credentials = new NetworkCredential("ghuahuasonco@gmail.com", "Kross986280383Kross");
+                cliente.Credentials = new NetworkCredential("TuEmail@gmail.com", "Tuclave");
                 MailMessage msg = new MailMessage();
                 msg.To.Add(EnviarEmail.msgto);
-                msg.From = new MailAddress("ghuahuasonco@gmail.com");
+                msg.From = new MailAddress("TuEmail@gmail.com");
                 msg.Subject = EnviarEmail.msgsubjet;
                 msg.Body = EnviarEmail.msgbody;
                 msg.IsBodyHtml = true;
@@ -38,14 +38,14 @@ namespace AF_ERESTServices
             try {
                 SmtpClient SmtpServer = new SmtpClient("smtp.live.com");
                 var mail = new MailMessage();
-                mail.From = new MailAddress("ghuahuasonco@hotmail.com");
+                mail.From = new MailAddress("TuEmail@hotmail.com");
                 mail.To.Add(EnviarEmail.msgto);
                 mail.Subject = EnviarEmail.msgsubjet;
                 mail.IsBodyHtml = true;
                 mail.Body = EnviarEmail.msgbody;
                 SmtpServer.Port = 587;
                 SmtpServer.UseDefaultCredentials = false;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("ghuahuasonco@hotmail.com", "Bella986280383");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("TuEmail@hotmail.com", "Tuclave");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 return Emailenviado;
